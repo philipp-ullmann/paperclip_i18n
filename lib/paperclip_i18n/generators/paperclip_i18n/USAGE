@@ -1,0 +1,18 @@
+Description:
+    This generator creates the migrations needed to use paperclip_i18n
+
+Requirements:
+    paperclip
+    authlogic (http://agilewebdevelopment.com/plugins/authgasm, with a working "UserSession" Model)
+    UserSession.current_lang: must return the current language identifier string
+
+Important:
+    Add "resources :assets, :only=>[:show]" to your routes.rb file and modify according to your needs.
+
+Example:
+    rails g paperclip_i18n
+
+    This will create:
+      - A migration, which adds an assets and attachings table.
+      - A controller (assets_controller.rb)
+      - A model (asset.rb)
