@@ -66,7 +66,7 @@ module PaperclipI18n
             normalised_styles[name] = { :processors => [:thumbnail], :geometry => dimensions, :format => format }
           end
           
-          return(true, normalised_styles)
+          return true, normalised_styles
         else
           return(false)
         end
