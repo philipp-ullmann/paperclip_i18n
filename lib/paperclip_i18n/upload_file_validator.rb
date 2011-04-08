@@ -1,8 +1,7 @@
 class UploadFileValidator < ActiveModel::EachValidator
   DEFAULT_OPTIONS = { :content_type => nil,
                       :less_then => nil,
-                      :presence => true,
-                      :skip_on_versioning => false }
+                      :presence => true }
 
   def initialize(options)
     super(options)
@@ -10,7 +9,6 @@ class UploadFileValidator < ActiveModel::EachValidator
   end
 
   def validate_each(record, attribute, value)
-    return if options[:skip_on_versioning] && !record.record_timestamps # due to the versioning, which is copied through jbackend
     less_then = options[:less_then]
     content_type = options[:content_type]
     return unless options[:presence]
