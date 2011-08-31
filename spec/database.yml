@@ -1,0 +1,3 @@
+test:
+  :adapter: sqlite3
+  :database: spec/paperclip_i18n.db
