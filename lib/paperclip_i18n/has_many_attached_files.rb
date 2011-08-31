@@ -11,7 +11,7 @@ module PaperclipI18n
       # http://www.thoughtbot.com/projects/paperclip
       def has_many_attached_files(options = {})
         class_attribute(:has_many_attached_files_options)
-        self.has_many_attached_files_options = { :counter_cache => options[:counter_cache], :styles => options[:styles], :model => options[:model] ||= ::Assets }
+        self.has_many_attached_files_options = { :counter_cache => options[:counter_cache], :styles => options[:styles], :model => options[:model] ||= ::Asset }
         
         attr_accessor(:upload)
         attr_accessor(:current_file_language)
