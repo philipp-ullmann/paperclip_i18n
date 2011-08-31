@@ -16,7 +16,7 @@ module PaperclipI18n
 
         has_attached_file(:upload, default_options)
         belongs_to(:attachable, :polymorphic => true)
-        scope(:i18ns, lambda { where(:upload_language => ::I18n.locale) })
+        scope(:i18ns, lambda { where(:upload_language => ::I18n.locale.to_s) })
         include(::PaperclipI18n::ActsAsAttachment::InstanceMethods)
       end
     end

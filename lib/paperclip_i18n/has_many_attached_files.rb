@@ -74,7 +74,7 @@ module PaperclipI18n
       
       # based on the Authlogic plugin (http://agilewebdevelopment.com/plugins/authgasm)
       def current_language
-        @current_file_language || ::I18n.locale
+        @current_file_language || ::I18n.locale.to_s
       end
     end
   end
