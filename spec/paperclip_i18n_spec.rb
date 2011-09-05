@@ -11,7 +11,7 @@ describe PaperclipI18n do
       @doc.save
     end
     it('should read the file name properly') do
-      @doc.assets.i18ns.first.name.should == File.basename(@file)
+      @doc.assets.i18ns.first.name.should == File.basename('upload_dummy.txt')
     end
     it('should store the file size properly') do
       @doc.assets.i18ns.first.size.should == @file.size
