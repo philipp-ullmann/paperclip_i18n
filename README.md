@@ -10,11 +10,11 @@ Every language has a seperate file scope.
 
 Add this line to your Gemfile
 
-  gem 'paranoid_i18n'
+    gem 'paranoid_i18n'
 
 Bundle update in your console:
 
-  bundle update
+    bundle update
 
 You may want to run the generator for final touches (see next step).
 
@@ -22,10 +22,10 @@ You may want to run the generator for final touches (see next step).
 
 There's a generator which creates the basic model, migration & controller for you:
 
-  rails g paperclip_i18n
-  rake db:migrate
+    rails g paperclip_i18n
+    rake db:migrate
 
 You have to specify the given controller in your roots
 
-  resources :assets, :only=>[:show]
+    resources :assets, :only=>[:show]
 
