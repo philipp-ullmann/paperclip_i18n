@@ -3,4 +3,7 @@
 Gemfile.lock
 pkg/*
 .rvmrc
+nbproject
+spec/paperclip_i18n.db
+spec/uploads
 vendor

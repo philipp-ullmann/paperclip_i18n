@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["rg@create.at", 'philipp.ullmann@create.at']
   s.homepage    = ""
   s.summary     = 'Adding I18n image upload support to paperclip plugin'
-  s.description = "This gem depends on the paperclip gem. A separate file can be uploaded for each language."
+  s.description = "This gem depends on the paperclip gem and Rails 3.1. A separate file can be uploaded for each language."
 
   s.rubyforge_project = 'paperclip_i18n'
 
@@ -20,5 +20,9 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   
   s.add_dependency('paperclip', ['>= 2.4.0'])
+  s.add_dependency('sqlite3', ['>= 1.3.4'])
+  s.add_development_dependency('activemodel', ['>= 3.1.0'])
+  s.add_development_dependency('activerecord', ['>= 3.1.0'])
+  s.add_development_dependency('rspec', ['>= 2.6.0'])
   s.add_development_dependency('rake', ['0.9.2'])
 end
