@@ -19,5 +19,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
   
-  s.add_dependency('paperclip', ['>= 2.3.8'])
+  s.add_dependency('paperclip', ['>= 2.4.0'])
+  s.add_development_dependency('rake', ['0.9.2'])
 end
