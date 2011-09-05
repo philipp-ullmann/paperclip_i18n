@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   
   s.add_dependency('paperclip', ['>= 2.3.8'])
   s.add_dependency('sqlite3', ['>= 1.3.4'])
-  s.add_development_dependency('activemodel', ['>= 3.1.0.rc8'])
-  s.add_development_dependency('activerecord', ['>= 3.1.0.rc8'])
+  s.add_development_dependency('activemodel', ['>= 3.1.0'])
+  s.add_development_dependency('activerecord', ['>= 3.1.0'])
   s.add_development_dependency('rspec', ['>= 2.6.0'])
 end
