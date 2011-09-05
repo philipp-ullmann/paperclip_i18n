@@ -23,6 +23,7 @@ describe PaperclipI18n do
         I18n.locale = :de
         @doc.upload = @file_german
         @doc.save
+        @doc.assets.reload
       end
       it('should have one english upload') do
         I18n.locale = :en
