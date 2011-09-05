@@ -1,4 +1,4 @@
-class UploadFileValidator < ActiveModel::EachValidator
+class UploadFileValidator < ::ActiveModel::EachValidator
   DEFAULT_OPTIONS = { :content_type => nil,
                       :less_then => nil,
                       :presence => true }

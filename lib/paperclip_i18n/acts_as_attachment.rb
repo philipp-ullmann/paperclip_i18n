@@ -10,12 +10,13 @@ module PaperclipI18n
       # This module needs the paperclip plugin to work
       # http://www.thoughtbot.com/projects/paperclip
       def acts_as_attachment(options = {})
-        default_options = { :url => "/uploads/#{Rails.env}/assets/:id_partition/:basename.:style.:extension",
-                            :path => "#{Rails.root}/public/uploads/#{Rails.env}/assets/:id_partition/:basename.:style.:extension" }.merge(options)
+        default_options = options
+        default_options[:url] = "/uploads/#{Rails.env}/assets/:id_partition/:basename.:style.:extension" if default_options[:url].blank?
+        default_options[:path] = "#{Rails.root}/public/uploads/#{Rails.env}/assets/:id_partition/:basename.:style.:extension" if default_options[:path].blank?
 
         has_attached_file(:upload, default_options)
         belongs_to(:attachable, :polymorphic => true)
-        scope(:i18ns, lambda { where(:upload_language => ::I18n.locale) })
+        scope(:i18ns, lambda { where(:upload_language => ::I18n.locale.to_s) })
         include(::PaperclipI18n::ActsAsAttachment::InstanceMethods)
       end
     end

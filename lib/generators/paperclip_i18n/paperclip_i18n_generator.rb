@@ -11,6 +11,7 @@ class PaperclipI18nGenerator < Rails::Generators::Base
     end
   end
 
+  desc "Creates an asset model & migration, prepares an assets controller"
   def create_paperclip_i18n_migration
     migration_template('migration.rb', 'db/migrate/paperclip_i18n_tables.rb')
     copy_file('assets_controller.rb', 'app/controllers/assets_controller.rb')
