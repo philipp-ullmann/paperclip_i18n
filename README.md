@@ -25,7 +25,7 @@ There's a generator which creates the basic model, migration & controller for yo
     rails g paperclip_i18n
     rake db:migrate
 
-You have to specify the given controller in your roots
+You have to specify the controller in your config/routes.rb
 
     resources :assets, :only=>[:show]
 
